@@ -1,0 +1,528 @@
+.users {
+    flex: 1;
+    padding: 30px 0;
+    margin-left: 230px;
+    width: calc(100% - 230px);
+}
+
+.content {
+    width: 95%;
+    margin: auto;
+}
+
+.header {
+    margin-bottom: 30px;
+}
+
+.header h1 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 32px;
+    color: #1e293b;
+}
+
+.header p {
+    color: #64748b;
+    margin-top: 5px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-bottom: 25px;
+}
+
+.card {
+    background: #fff;
+    padding: 22px;
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, .06);
+}
+
+.icon,
+.iconGreen,
+.iconOrange {
+    width: 65px;
+    height: 65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    font-size: 25px;
+}
+
+.icon {
+    background: #eef2ff;
+    color: #4f46e5;
+}
+
+.iconGreen {
+    background: #dcfce7;
+    color: #16a34a;
+}
+
+.iconOrange {
+    background: #fff2ed;
+    color: #ff6b35;
+}
+
+.card h2 {
+    font-size: 28px;
+}
+
+.card p {
+    color: #64748b;
+}
+
+.searchBox {
+    margin: 25px 0;
+    background: #fff;
+    border-radius: 15px;
+    padding: 14px 18px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .05);
+}
+
+.searchBox input {
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 15px;
+}
+
+.tableBox {
+    background: #fff;
+    border-radius: 18px;
+    padding: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, .06);
+    overflow: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    background: #f8fafc;
+    padding: 15px;
+    text-align: left;
+}
+
+td {
+    padding: 15px;
+    border-top: 1px solid #eee;
+}
+
+tbody tr:hover {
+    background: #fff7f4;
+}
+
+.view {
+    background: #eef2ff;
+    color: #4f46e5;
+}
+
+.delete {
+    background: #fee2e2;
+    color: #ef4444;
+}
+
+.actionbtn button {
+    width: 35px;
+    height: 35px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .25s;
+}
+
+.actionbtn {
+    display: flex;
+    gap: 8px;
+}
+
+.view:hover {
+    background-color: #766ff2;
+    color: white;
+}
+
+.delete:hover {
+    background-color: #ef4444;
+    color: white;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 30px 0;
+    flex-wrap: wrap;
+}
+
+.pagination button {
+    min-width: 42px;
+    height: 42px;
+    border: none;
+    border-radius: 8px;
+    background: #f2f2f2;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 600;
+    transition: .3s;
+}
+
+.pagination button:hover:not(:disabled) {
+    background: tomato;
+    color: white;
+}
+
+.pagination button:disabled {
+    opacity: .5;
+    cursor: not-allowed;
+}
+
+.activePage {
+    background: tomato !important;
+    color: white;
+}
+
+
+@media (max-width: 1200px) {
+    .users {
+        padding: 25px 0;
+    }
+
+    .content {
+        width: 94%;
+    }
+
+    .cards {
+        gap: 18px;
+    }
+
+    .card {
+        padding: 18px;
+        gap: 14px;
+    }
+
+    .icon,
+    .iconGreen,
+    .iconOrange {
+        width: 58px;
+        height: 58px;
+        min-width: 58px;
+        font-size: 22px;
+    }
+
+    .card h2 {
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 992px) {
+    .users {
+        margin-left: 180px;
+        width: calc(100% - 180px);
+        padding: 25px 0;
+    }
+
+    .content {
+        width: 93%;
+    }
+
+    .header {
+        margin-bottom: 25px;
+    }
+
+    .header h1 {
+        font-size: 28px;
+    }
+
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .card {
+        padding: 18px;
+    }
+
+    .searchBox {
+        margin: 20px 0;
+    }
+
+    .tableBox {
+        width: 100%;
+        overflow-x: auto;
+        overflow-y: hidden;
+    }
+
+    .tableBox table {
+        width: 100%;
+    }
+
+    .thead,
+    .tbody {
+        min-width: 1200px;
+    }
+
+    .tableBox th,
+    .tableBox td {
+        padding: 13px;
+    }
+}
+
+@media (max-width: 768px) {
+    .users {
+        width: 100%;
+        margin-left: 0;
+        padding: 20px 0;
+    }
+
+    .content {
+        width: 92%;
+    }
+
+    .header {
+        margin-bottom: 20px;
+    }
+
+    .header h1 {
+        font-size: 24px;
+        gap: 8px;
+    }
+
+    .header p {
+        font-size: 14px;
+    }
+
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+        margin-bottom: 20px;
+    }
+
+    .card {
+        padding: 15px;
+        border-radius: 13px;
+        gap: 12px;
+    }
+
+    .icon,
+    .iconGreen,
+    .iconOrange {
+        width: 48px;
+        height: 48px;
+        min-width: 48px;
+        border-radius: 12px;
+        font-size: 19px;
+    }
+
+    .card h2 {
+        font-size: 22px;
+    }
+
+    .card p {
+        font-size: 12px;
+    }
+
+    .searchBox {
+        padding: 12px 14px;
+        margin: 18px 0;
+        border-radius: 12px;
+    }
+
+    .searchBox input {
+        font-size: 14px;
+    }
+
+    .tableBox {
+        padding: 12px;
+        border-radius: 13px;
+        overflow-x: auto;
+    }
+
+    .tableBox table {
+        min-width: 680px;
+    }
+
+    .tableBox th,
+    .tableBox td {
+        padding: 11px;
+        font-size: 13px;
+    }
+
+
+
+    .pagination {
+        margin: 22px 0;
+        gap: 7px;
+    }
+
+    .pagination button {
+        min-width: 38px;
+        height: 38px;
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 576px) {
+    .users {
+        padding: 30px 0;
+    }
+
+    .content {
+        width: 94%;
+    }
+
+    .header h1 {
+        font-size: 21px;
+    }
+
+    .header p {
+        font-size: 12px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .card {
+        padding: 14px;
+        border-radius: 12px;
+    }
+
+    .icon,
+    .iconGreen,
+    .iconOrange {
+        width: 45px;
+        height: 45px;
+        min-width: 45px;
+        font-size: 18px;
+    }
+
+    .card h2 {
+        font-size: 20px;
+    }
+
+    .card p {
+        font-size: 12px;
+    }
+
+    .searchBox {
+        margin: 15px 0;
+        padding: 11px 12px;
+    }
+
+    .searchBox input {
+        font-size: 13px;
+    }
+
+    .tableBox {
+        padding: 10px;
+        border-radius: 11px;
+    }
+
+    .tableBox table {
+        min-width: 650px;
+    }
+
+    .tableBox th,
+    .tableBox td {
+        padding: 10px;
+        font-size: 12px;
+    }
+
+
+    .pagination {
+        gap: 5px;
+        margin: 20px 0;
+    }
+
+    .pagination button {
+        min-width: 35px;
+        height: 35px;
+        font-size: 12px;
+        border-radius: 7px;
+    }
+}
+
+@media (max-width: 420px) {
+    .users {
+        padding-top: 35px;
+    }
+
+    .content {
+        width: 95%;
+    }
+
+    .header h1 {
+        font-size: 19px;
+    }
+
+    .header p {
+        font-size: 11px;
+    }
+
+    .card {
+        padding: 12px;
+    }
+
+    .icon,
+    .iconGreen,
+    .iconOrange {
+        width: 42px;
+        height: 42px;
+        min-width: 42px;
+        font-size: 16px;
+    }
+
+    .card h2 {
+        font-size: 18px;
+    }
+
+    .card p {
+        font-size: 11px;
+    }
+
+    .searchBox {
+        padding: 10px;
+    }
+
+    .searchBox input {
+        font-size: 12px;
+    }
+
+    .tableBox {
+        padding: 8px;
+    }
+
+    .tableBox table {
+        min-width: 630px;
+    }
+
+    .tableBox th,
+    .tableBox td {
+        padding: 9px;
+        font-size: 11px;
+    }
+
+    .pagination button {
+        min-width: 32px;
+        height: 32px;
+        font-size: 11px;
+    }
+}

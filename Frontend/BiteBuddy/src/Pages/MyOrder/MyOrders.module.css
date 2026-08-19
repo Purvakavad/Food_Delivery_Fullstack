@@ -1,0 +1,151 @@
+.myOrders {
+    width: 95%;
+    margin: 14vh auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.heading {
+    font-size: 30px;
+    font-weight: 600;
+    color: #222;
+}
+
+.empty {
+    padding: 80px 20px;
+    text-align: center;
+    font-size: 18px;
+    color: #777;
+    border: 1px dashed #ccc;
+    border-radius: 10px;
+}
+
+.orderCard {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    padding: 20px;
+    border: 1px solid #e5e5e5;
+    border-radius: 12px;
+    background: #fff;
+    transition: 0.3s;
+}
+
+.orderCard:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.left {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    flex: 1;
+}
+
+.orderImage {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+}
+
+.orderTitle {
+    font-size: 20px;
+    font-weight: 600;
+    color: #222;
+    margin-bottom: 10px;
+}
+
+.orderItems {
+    font-size: 15px;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 8px;
+}
+
+.address {
+    font-size: 14px;
+    color: #888;
+}
+
+.right {
+    min-width: 220px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-start;
+}
+
+.right p {
+    font-size: 15px;
+    color: #444;
+}
+
+.status {
+    color: #27ae60;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.trackBtn {
+    padding: 10px 22px;
+    background: tomato;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.trackBtn:hover {
+    background: #e54c2d;
+}
+
+.trackBtn:active {
+    transform: scale(0.97);
+}
+
+@media (max-width: 992px) {
+    .orderCard {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .right {
+        width: 100%;
+    }
+}
+
+@media (max-width: 567px) {
+    .myOrders {
+        width: 95%;
+    }
+
+    .heading {
+        font-size: 24px;
+    }
+
+    .left {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .orderImage {
+        width: 60px;
+        height: 60px;
+    }
+
+    .orderTitle {
+        font-size: 18px;
+    }
+
+    .orderItems,
+    .address,
+    .right p {
+        font-size: 14px;
+    }
+}

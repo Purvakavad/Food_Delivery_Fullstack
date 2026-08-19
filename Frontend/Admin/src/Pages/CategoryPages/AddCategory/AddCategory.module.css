@@ -1,0 +1,497 @@
+.add_category {
+    width: 100%;
+    padding: 30px;
+    background: #f7f8fc;
+    min-height: 100vh;
+    margin-left: 230px;
+    width: calc(100% - 230px);
+}
+
+.main_conatiner {
+    background: #fff;
+    border-radius: 16px;
+    padding: 30px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.main_conatiner h2 {
+    margin-bottom: 30px;
+    color: #222;
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 35px;
+}
+
+.left_part {
+    background: #fff;
+}
+
+.inputs {
+    margin-bottom: 22px;
+}
+
+.inputs label {
+    font-size: 15px;
+    font-weight: 600;
+    color: #444;
+    display: inline-block;
+    margin-bottom: 8px;
+}
+
+.inputs input,
+.inputs textarea,
+.inputs select {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #dcdcdc;
+    border-radius: 10px;
+    outline: none;
+    font-size: 15px;
+    transition: .3s;
+}
+
+.inputs select {
+    padding: 0 14px;
+}
+
+.inputs textarea {
+    resize: none;
+    height: 120px;
+}
+
+.inputs input:focus,
+.inputs textarea:focus,
+.inputs select:focus {
+    border-color: #ff6b35;
+    box-shadow: 0 0 8px rgba(255, 107, 53, .2);
+}
+
+.show_home {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 20px 0;
+    font-weight: 500;
+    color: #444;
+}
+
+.show_home input {
+    width: 18px;
+    height: 18px;
+    accent-color: #ff6b35;
+    cursor: pointer;
+}
+
+.category_img {
+    margin-top: 25px;
+}
+
+.category_img label {
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;
+}
+
+.img {
+    width: 180px;
+    height: 180px;
+    object-fit: contain;
+    border: 2px dashed #d5d5d5;
+    border-radius: 12px;
+    padding: 20px;
+    margin-top: 10px;
+    transition: .3s;
+}
+
+.img:hover {
+    border-color: #ff6b35;
+}
+
+.right_part {
+    border: 1px solid #ececec;
+    border-radius: 12px;
+    padding: 25px;
+    text-align: center;
+    background: #fafafa;
+    height: fit-content;
+}
+
+.right_part h4 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.right_part img {
+    width: 220px;
+    height: 220px;
+    object-fit: contain;
+    border-radius: 12px;
+    border: 1px solid #ddd;
+    background: #fff;
+    padding: 15px;
+}
+
+.right_part p {
+    margin-top: 12px;
+    color: #777;
+    font-size: 14px;
+}
+
+.info {
+    margin-top: 25px;
+    text-align: left;
+}
+
+.info p {
+    margin-bottom: 10px;
+    background: #fff;
+    padding: 10px 14px;
+    border-radius: 8px;
+    border: 1px solid #eee;
+    color: #444;
+    word-break: break-word;
+}
+
+.btn {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    margin-top: 35px;
+}
+
+.btn button {
+    padding: 12px 28px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 500;
+    transition: .3s;
+}
+
+.btn button:first-child {
+    background: #e5e5e5;
+    color: #333;
+}
+
+.btn button:first-child:hover {
+    background: #d5d5d5;
+}
+
+.orange {
+    background: #ff6b35;
+    color: #fff;
+}
+
+.orange:hover {
+    background: #e95d29;
+}
+
+@media (max-width: 1200px) {
+    .add_category {
+        padding: 25px;
+    }
+
+    .main_conatiner {
+        padding: 25px;
+    }
+
+    .container {
+        gap: 25px;
+    }
+
+    .right_part {
+        padding: 20px;
+    }
+
+    .right_part>img {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+@media (max-width: 992px) {
+    .add_category {
+        padding: 25px 0;
+        margin-left: 180px;
+        width: calc(100% - 180px);
+    }
+
+    .main_conatiner {
+        padding: 25px;
+        margin: auto;
+        width: 93%;
+    }
+
+    .main_conatiner h2 {
+        font-size: 25px;
+        margin-bottom: 25px;
+    }
+
+    .container {
+        grid-template-columns: minmax(0, 1.5fr) minmax(240px, 1fr);
+        gap: 20px;
+    }
+
+    .right_part {
+        padding: 18px;
+    }
+
+    .right_part>img {
+        width: 180px;
+        height: 180px;
+    }
+
+    .info {
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .add_category {
+        width: 95%;
+        margin: 0 auto;
+    }
+
+    .main_conatiner {
+        border-radius: 12px;
+    }
+
+    .main_conatiner h2 {
+        font-size: 23px;
+        margin-bottom: 22px;
+    }
+
+    .container {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .left_part {
+        width: 100%;
+    }
+
+    .right_part {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .inputs {
+        margin-bottom: 18px;
+    }
+
+    .inputs label {
+        font-size: 14px;
+    }
+
+    .inputs input,
+    .inputs textarea,
+    .inputs select {
+        font-size: 14px;
+        padding: 11px;
+    }
+
+    .inputs textarea {
+        min-height: 110px;
+    }
+
+    .category_img {
+        margin-top: 20px;
+    }
+
+    .img {
+        width: 170px;
+        height: 170px;
+    }
+
+    .right_part>img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .btn {
+        width: 100%;
+        justify-content: flex-end;
+        margin-top: 25px;
+    }
+
+    .btn button {
+        padding: 11px 22px;
+    }
+}
+
+@media (max-width: 576px) {
+    .add_category {
+        padding: 25px 0;
+        margin: 0 auto;
+    }
+
+    .main_conatiner {
+        padding: 16px;
+        border-radius: 10px;
+    }
+
+    .main_conatiner h2 {
+        font-size: 21px;
+        margin-bottom: 20px;
+    }
+
+    .container {
+        gap: 20px;
+    }
+
+    .inputs {
+        margin-bottom: 16px;
+    }
+
+    .inputs label {
+        font-size: 13px;
+        margin-bottom: 6px;
+    }
+
+    .inputs input,
+    .inputs textarea,
+    .inputs select {
+        font-size: 13px;
+        padding: 10px;
+        border-radius: 8px;
+    }
+
+    .inputs textarea {
+        min-height: 100px;
+    }
+
+    .show_home {
+        font-size: 14px;
+        gap: 8px;
+        margin: 15px 0;
+    }
+
+    .show_home input {
+        width: 17px;
+        height: 17px;
+    }
+
+    .category_img {
+        margin-top: 15px;
+    }
+
+    .category_img label {
+        font-size: 14px;
+    }
+
+    .img {
+        width: 160px;
+        height: 160px;
+        padding: 15px;
+    }
+
+    .right_part {
+        padding: 15px;
+    }
+
+    .right_part h4 {
+        font-size: 16px;
+        margin-bottom: 15px;
+    }
+
+    .right_part>img {
+        width: 180px;
+        height: 180px;
+        padding: 10px;
+    }
+
+    .right_part>p {
+        font-size: 12px;
+    }
+
+    .info {
+        margin-top: 18px;
+    }
+
+    .info p {
+        padding: 9px 10px;
+        font-size: 13px;
+    }
+
+    .btn {
+        gap: 10px;
+        margin-top: 20px;
+    }
+
+    .btn button {
+        flex: 1;
+        padding: 10px 8px;
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 420px) {
+    .add_category {
+        width: 95%;
+        padding-top: 40px;
+    }
+
+    .main_conatiner {
+        padding: 12px;
+    }
+
+    .main_conatiner h2 {
+        font-size: 19px;
+        margin-bottom: 17px;
+    }
+
+    .inputs input,
+    .inputs textarea,
+    .inputs select {
+        font-size: 12px;
+        padding: 9px;
+    }
+
+    .inputs textarea {
+        min-height: 90px;
+    }
+
+    .show_home {
+        font-size: 12px;
+    }
+
+    .show_home input {
+        width: 15px;
+        height: 15px;
+    }
+
+    .img {
+        width: 145px;
+        height: 145px;
+        padding: 12px;
+    }
+
+    .right_part {
+        padding: 12px;
+    }
+
+    .right_part>img {
+        width: 160px;
+        height: 160px;
+    }
+
+    .info p {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    .btn {
+        gap: 7px;
+    }
+
+    .btn button {
+        font-size: 12px;
+        padding: 9px 5px;
+    }
+}

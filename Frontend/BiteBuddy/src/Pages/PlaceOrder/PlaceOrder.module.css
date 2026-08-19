@@ -1,0 +1,187 @@
+.placeOrder {
+    width: 95%;
+    margin: 15vh auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.placeOrderLeft {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.placeOrderLeft h2 {
+    margin-bottom: 25px;
+    color: #222;
+    font-size: 28px;
+}
+
+.placeOrderLeft input {
+    width: 100%;
+    padding: 14px 16px;
+    margin-bottom: 18px;
+    border: 1px solid #d9d9d9;
+    border-radius: 8px;
+    outline: none;
+    font-size: 15px;
+    transition: 0.3s;
+    box-sizing: border-box;
+}
+
+.placeOrderLeft input:focus {
+    border-color: #ff6b35;
+}
+
+.multiField {
+    display: flex;
+    gap: 15px;
+}
+
+.multiField input {
+    flex: 1;
+}
+
+.placeOrderRight {
+    width: 380px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.cartTotal {
+    border: 1px solid #e6e6e6;
+    border-radius: 12px;
+    padding: 25px;
+    background: #fff;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.06);
+}
+
+.cartTotal h2 {
+    margin-bottom: 20px;
+    color: #222;
+}
+
+.cartTotalDetails {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 14px 0;
+    font-size: 16px;
+}
+
+.cartTotal hr {
+    border: none;
+    border-top: 1px solid #e5e5e5;
+    margin: 15px 0;
+}
+
+.paymentMethod {
+    border: 1px solid #e6e6e6;
+    border-radius: 12px;
+    padding: 25px;
+    background: #fff;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.06);
+}
+
+.paymentMethod h3 {
+    margin-bottom: 18px;
+    color: #222;
+}
+
+.paymentOptions {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.paymentOptions button {
+    padding: 14px;
+    border: 1px solid #ff6b35;
+    background: #fff;
+    color: #ff6b35;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.paymentOptions button.btnactive {
+    background-color: tomato;
+    color: white;
+}
+
+.paymentOptions button:hover {
+    background: #ff6b35;
+    color: #fff;
+}
+
+.placeBtn {
+    width: 100%;
+    padding: 15px;
+    background: #ff6b35;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 17px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.placeBtn:hover {
+    background: #e75a29;
+}
+
+@media (max-width: 992px) {
+    .placeOrder {
+        flex-direction: column;
+    }
+
+    .placeOrderRight {
+        width: 100%;
+    }
+
+    .paymentOptions {
+        display: flex;
+        flex-direction: row;
+        gap: 25px;
+    }
+
+    .paymentOptions button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .placeOrder {
+        width: 95%;
+    }
+
+    .placeOrderLeft {
+        padding: 0 20px;
+    }
+
+    .multiField {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .placeOrderLeft h2,
+    .cartTotal h2 {
+        font-size: 24px;
+    }
+
+    .paymentMethod h3 {
+        font-size: 20px;
+    }
+}
+
+@media (max-width:420px) {
+    .paymentOptions {
+        flex-direction: column;
+        gap: 8px;
+    }
+}

@@ -1,0 +1,329 @@
+.userDetails {
+    flex: 1;
+    margin-left: 230px;
+    width: calc(100% - 230px);
+}
+
+.container {
+    width: 95%;
+    margin: auto;
+    padding: 30px 0;
+}
+
+.back {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    background: #ff6b35;
+    color: white;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.card {
+    background: white;
+    border-radius: 18px;
+    padding: 35px;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, .08);
+}
+
+.avatar {
+    font-size: 90px;
+    color: #ff6b35;
+}
+
+.card h2 {
+    margin-top: 10px;
+    color: #1f2937;
+}
+
+.card p {
+    color: #64748b;
+}
+
+.info {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 30px;
+}
+
+.info div {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    background: #fff4ef;
+    padding: 15px 25px;
+    border-radius: 12px;
+}
+
+.orders {
+    background: white;
+    margin-top: 25px;
+    padding: 25px;
+    border-radius: 18px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, .08);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th,
+td {
+    padding: 16px;
+    border-bottom: 1px solid #eee;
+    text-align: left;
+}
+
+@media (max-width: 1200px) {
+    .container {
+        width: 94%;
+    }
+
+    .card {
+        padding: 30px;
+    }
+
+    .avatar {
+        font-size: 80px;
+    }
+
+    .info {
+        gap: 25px;
+    }
+
+    .info div {
+        padding: 13px 20px;
+    }
+}
+
+@media (max-width: 992px) {
+    .userDetails {
+        margin-left: 180px;
+        width: calc(100% - 180px);
+    }
+
+    .container {
+        width: 93%;
+        padding: 25px 0;
+    }
+
+    .card {
+        padding: 28px;
+    }
+
+    .avatar {
+        font-size: 75px;
+    }
+
+    .info {
+        gap: 20px;
+    }
+
+    .info div {
+        padding: 12px 18px;
+    }
+
+    .orders {
+        padding: 20px;
+    }
+
+    .orders table {
+        min-width: 550px;
+    }
+
+    .orders {
+        overflow-x: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .userDetails {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .container {
+        width: 92%;
+        padding: 20px 0;
+    }
+
+    .back {
+        padding: 10px 16px;
+        font-size: 14px;
+        margin-bottom: 15px;
+    }
+
+    .card {
+        padding: 25px 18px;
+        border-radius: 14px;
+    }
+
+    .avatar {
+        font-size: 70px;
+    }
+
+    .card h2 {
+        font-size: 21px;
+    }
+
+    .card p {
+        font-size: 14px;
+    }
+
+    .info {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+        margin-top: 22px;
+    }
+
+    .info div {
+        justify-content: center;
+        padding: 12px 15px;
+        font-size: 14px;
+    }
+
+    .orders {
+        margin-top: 18px;
+        padding: 15px;
+        border-radius: 14px;
+        overflow-x: auto;
+    }
+
+    .orders h3 {
+        font-size: 18px;
+    }
+
+    .orders table {
+        min-width: 550px;
+        margin-top: 15px;
+    }
+
+    .orders th,
+    .orders td {
+        padding: 12px;
+        font-size: 13px;
+        white-space: nowrap;
+    }
+}
+
+@media (max-width: 576px) {
+    .container {
+        width: 94%;
+        padding: 15px 0;
+    }
+
+    .back {
+        padding: 9px 14px;
+        font-size: 13px;
+        border-radius: 8px;
+    }
+
+    .card {
+        padding: 22px 14px;
+        border-radius: 12px;
+    }
+
+    .avatar {
+        font-size: 62px;
+    }
+
+    .card h2 {
+        font-size: 19px;
+        margin-top: 8px;
+    }
+
+    .card p {
+        font-size: 13px;
+    }
+
+    .info {
+        margin-top: 18px;
+        gap: 8px;
+    }
+
+    .info div {
+        padding: 11px 12px;
+        font-size: 13px;
+        border-radius: 9px;
+    }
+
+    .orders {
+        margin-top: 15px;
+        padding: 12px;
+        border-radius: 12px;
+    }
+
+    .orders h3 {
+        font-size: 17px;
+    }
+
+    .orders table {
+        min-width: 500px;
+    }
+
+    .orders th,
+    .orders td {
+        padding: 10px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 400px) {
+    .container {
+        width: 95%;
+        padding: 30px 0;
+    }
+
+    .back {
+        padding: 8px 12px;
+        font-size: 12px;
+    }
+
+    .card {
+        padding: 18px 10px;
+    }
+
+    .avatar {
+        font-size: 55px;
+    }
+
+    .card h2 {
+        font-size: 17px;
+    }
+
+    .card p {
+        font-size: 12px;
+    }
+
+    .info div {
+        font-size: 12px;
+        padding: 10px;
+    }
+
+    .orders {
+        padding: 10px;
+    }
+
+    .orders h3 {
+        font-size: 16px;
+    }
+
+    .orders table {
+        min-width: 460px;
+    }
+
+    .orders th,
+    .orders td {
+        padding: 9px;
+        font-size: 11px;
+    }
+}

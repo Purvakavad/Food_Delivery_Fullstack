@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.main_container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10vh;
+}
+
+.main {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    background-color: rgb(248, 248, 248);
+}
+
+@media (max-width:768px) {
+    .main_container {
+        margin-top: 6vh;
+    }
+}

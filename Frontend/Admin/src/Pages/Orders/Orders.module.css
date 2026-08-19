@@ -1,0 +1,426 @@
+.order_page {
+    flex: 1;
+    margin-left: 230px;
+    width: calc(100% - 230px);
+}
+
+.orders {
+    width: 95%;
+    margin: 40px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.heading {
+    font-size: 30px;
+    font-weight: 600;
+    color: #222;
+}
+
+.orderCard {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 30px;
+    padding: 20px;
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    border-radius: 12px;
+    transition: 0.3s ease;
+}
+
+.orderCard:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.left {
+    display: flex;
+    gap: 20px;
+    flex: 1;
+}
+
+.orderImage {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+}
+
+.left h3 {
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: #222;
+}
+
+.customer {
+    font-size: 17px;
+    font-weight: 600;
+    color: tomato;
+    margin-bottom: 8px;
+}
+
+.left p {
+    color: #666;
+    line-height: 1.7;
+    font-size: 15px;
+}
+
+.right {
+    min-width: 220px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.right p {
+    font-size: 15px;
+    color: #444;
+}
+
+.right select {
+    padding: 10px 14px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    cursor: pointer;
+    font-size: 15px;
+    background: #fff;
+}
+
+.right select:focus {
+    border-color: tomato;
+}
+
+.status {
+    color: #27ae60;
+    font-weight: 600;
+}
+
+.paymentSuccess {
+    color: green;
+    font-weight: 600;
+}
+
+.paymentPending {
+    color: red;
+    font-weight: 600;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 30px 0;
+    flex-wrap: wrap;
+}
+
+.pagination button {
+    min-width: 42px;
+    height: 42px;
+    border: none;
+    border-radius: 8px;
+    background: #f2f2f2;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 600;
+    transition: .3s;
+}
+
+.pagination button:hover:not(:disabled) {
+    background: tomato;
+    color: white;
+}
+
+.pagination button:disabled {
+    opacity: .5;
+    cursor: not-allowed;
+}
+
+.activePage {
+    background: tomato !important;
+    color: white;
+}
+
+@media (max-width: 1200px) {
+    .orders {
+        width: 94%;
+    }
+
+    .orderCard {
+        gap: 20px;
+        padding: 18px;
+    }
+
+    .left {
+        gap: 15px;
+    }
+
+    .right {
+        min-width: 200px;
+    }
+
+    .left h3 {
+        font-size: 18px;
+    }
+
+    .left p {
+        font-size: 14px;
+    }
+}
+
+/* =========================================
+   TABLET
+   992px
+========================================= */
+@media (max-width: 992px) {
+    .order_page {
+        margin-left: 180px;
+        width: calc(100% - 180px);
+    }
+
+    .orders {
+        width: 93%;
+        margin: 30px auto;
+    }
+
+    .heading {
+        font-size: 27px;
+    }
+
+    .orderCard {
+        flex-direction: column;
+        width: 100%;
+        box-sizing: border-box;
+        gap: 20px;
+    }
+
+    .left {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .right {
+        width: 100%;
+        min-width: 0;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px 20px;
+    }
+
+    .right select {
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
+
+/* =========================================
+   MOBILE
+   768px
+========================================= */
+@media (max-width: 768px) {
+    .order_page {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .orders {
+        width: 92%;
+        margin: 20px auto;
+        gap: 15px;
+    }
+
+    .heading {
+        font-size: 24px;
+    }
+
+    .orderCard {
+        padding: 15px;
+        border-radius: 10px;
+        gap: 18px;
+    }
+
+    .left {
+        gap: 12px;
+        align-items: flex-start;
+    }
+
+    .orderImage {
+        width: 55px;
+        height: 55px;
+        flex-shrink: 0;
+    }
+
+    .left h3 {
+        font-size: 17px;
+        margin-bottom: 8px;
+        line-height: 1.4;
+        word-break: break-word;
+    }
+
+    .customer {
+        font-size: 15px;
+    }
+
+    .left p {
+        font-size: 13px;
+        line-height: 1.6;
+        word-break: break-word;
+    }
+
+    .right {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px 15px;
+    }
+
+    .right p {
+        font-size: 13px;
+        margin: 0;
+    }
+
+    .right select {
+        grid-column: 1 / -1;
+        padding: 9px 10px;
+        font-size: 13px;
+    }
+
+    .pagination {
+        margin: 20px 0;
+        gap: 7px;
+    }
+
+    .pagination button {
+        min-width: 38px;
+        height: 38px;
+        font-size: 13px;
+    }
+}
+
+/* =========================================
+   SMALL MOBILE
+   576px
+========================================= */
+@media (max-width: 576px) {
+    .orders {
+        width: 94%;
+        padding-top: 30px;
+        margin: 0 auto;
+    }
+
+    .heading {
+        font-size: 21px;
+    }
+
+    .orderCard {
+        padding: 13px;
+        gap: 15px;
+    }
+
+    .left {
+        gap: 10px;
+    }
+
+    .orderImage {
+        width: 45px;
+        height: 45px;
+    }
+
+    .left h3 {
+        font-size: 15px;
+        margin-bottom: 6px;
+    }
+
+    .customer {
+        font-size: 14px;
+        margin-bottom: 5px;
+    }
+
+    .left p {
+        font-size: 12px;
+        line-height: 1.5;
+    }
+
+    .right {
+        grid-template-columns: 1fr;
+        gap: 9px;
+    }
+
+    .right p {
+        font-size: 12px;
+    }
+
+    .right select {
+        grid-column: auto;
+        width: 100%;
+        padding: 9px;
+        font-size: 12px;
+    }
+
+    .pagination {
+        gap: 5px;
+    }
+
+    .pagination button {
+        min-width: 35px;
+        height: 35px;
+        font-size: 12px;
+        border-radius: 6px;
+    }
+}
+
+/* =========================================
+   VERY SMALL MOBILE
+   400px
+========================================= */
+@media (max-width: 420px) {
+    .orders {
+        width: 95%;
+        margin: 12px auto;
+        padding-top: 20px;
+    }
+
+    .heading {
+        font-size: 19px;
+    }
+
+    .orderCard {
+        padding: 11px;
+    }
+
+    .left {
+        gap: 8px;
+    }
+
+    .orderImage {
+        width: 40px;
+        height: 40px;
+    }
+
+    .left h3 {
+        font-size: 14px;
+    }
+
+    .customer {
+        font-size: 13px;
+    }
+
+    .left p {
+        font-size: 11px;
+        line-height: 1.45;
+    }
+
+    .right p {
+        font-size: 11px;
+    }
+
+    .right select {
+        font-size: 11px;
+        padding: 8px;
+    }
+
+    .pagination button {
+        min-width: 32px;
+        height: 32px;
+        font-size: 11px;
+    }
+}

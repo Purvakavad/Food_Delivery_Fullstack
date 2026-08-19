@@ -1,0 +1,152 @@
+.profile {
+    width: 100%;
+    min-height: 100vh;
+    margin-top: 10vh;
+    background: #f6f6f6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+.card {
+    width: 850px;
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .08);
+}
+
+.header {
+    background: tomato;
+    color: white;
+    text-align: center;
+    padding: 35px;
+}
+
+.profileIcon {
+    font-size: 90px;
+    margin-bottom: 10px;
+}
+
+.profileImg {
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    border: 2px solid white;
+}
+
+.header h2 {
+    margin: 10px 0 5px;
+}
+
+.header p {
+    margin: 4px 0;
+    opacity: .9;
+}
+
+.editBtn {
+    margin-top: 20px;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background: white;
+    color: tomato;
+    font-weight: 600;
+    transition: .3s;
+}
+
+.editBtn:hover {
+    transform: translateY(-2px);
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 30px;
+}
+
+.box {
+    background: #fafafa;
+    border-radius: 12px;
+    text-align: center;
+    padding: 25px;
+}
+
+.box svg {
+    font-size: 35px;
+    color: tomato;
+}
+
+.box h3 {
+    margin: 12px 0 5px;
+}
+
+.box span {
+    color: #666;
+}
+
+.recentOrders {
+    padding: 0 30px 30px;
+}
+
+.recentOrders h3 {
+    margin-bottom: 20px;
+}
+
+.order {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    margin-bottom: 12px;
+}
+
+.delivered {
+    background: #e8f8ec;
+    color: #2e7d32;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 14px;
+}
+
+.product_info {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.product_img {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.product_img img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+@media(max-width:768px) {
+    .card {
+        width: 100%;
+    }
+}
+
+@media (max-width:576px) {
+    .stats {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media (max-width:420px) {
+    .header {
+        padding: 15px;
+    }
+}
