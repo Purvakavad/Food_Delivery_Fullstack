@@ -1,11 +1,11 @@
 {
-  "name": "backend",
+  "name": "bitebuddy-backend",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "server": "nodemon server.js"
+    "server": "node server.js"
   },
   "keywords": [],
   "author": "",

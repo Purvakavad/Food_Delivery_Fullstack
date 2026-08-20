@@ -43,6 +43,10 @@ app.use('/api/cart',cartRoute)
 app.use('/api/order',orderRoute)
 app.use('/api/coupon',cartRoute)
 app.use("/api/payment", paymentRouter);
-app.listen(4000,()=>{
-    console.log("server run on port 4000")
-})
+if (process.env.NODE_ENV !== "production") {
+    app.listen(4000, () => {
+        console.log("server run on port 4000");
+    });
+}
+
+export default app;
