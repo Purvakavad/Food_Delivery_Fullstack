@@ -1,21 +1,39 @@
-import jwt from 'jsonwebtoken'
-const adminauth = (req,res,next) => {
+import jwt from 'jsonwebtoken';
+
+const adminauth = (req, res, next) => {
     try {
-        const token = req.cookies.adminToken
-        if(!token){
-            return res.json({success:false,message:"Please login first"})
+
+        const token = req.cookies.adminToken;
+
+        if (!token) {
+            return res.status(401).json({
+                success: false,
+                message: "Please login first"
+            });
         }
-        const decoded  = jwt.verify(token,process.env.JWT_SECRET)
-        if(decoded .role != "admin"){
-            return res.json({success:false,message:"Unauthorized"})
-        }
-        req.adminId = decoded.id
+
+        const decoded = jwt.verify(
+            token,
+            process.env.JWT_SECRET
+        );
+
+        req.admin = {
+            id: decoded.id,
+            role: decoded.role
+        };
+
+        req.adminId = decoded.id;
+
         next();
+
     } catch (error) {
-        return res.json({
+
+        return res.status(401).json({
             success: false,
-            message: error.message,
+            message: "Invalid or expired admin token"
         });
+
     }
-}
-export default adminauth
+};
+
+export default adminauth;

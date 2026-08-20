@@ -5,11 +5,9 @@ import axios from 'axios'
 import { toast } from 'react-toastify'
 import { useContext } from "react";
 import { AdminContext } from "../../Context/AdminContext";
-import { StoreContext } from "../../../../BiteBuddy/src/Context/StoreContext";
 
 const Login = () => {
-    const { backend_url, navigate } = useContext(StoreContext)
-    const { isLogin, setIsLogin } = useContext(AdminContext)
+    const { isLogin, setIsLogin, backend_url, navigate } = useContext(AdminContext)
     const [showPassword, setShowPassword] = useState(false)
     const [data, setData] = useState({
         email: "",

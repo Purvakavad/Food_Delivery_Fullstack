@@ -54,6 +54,9 @@ export default function Category() {
             }
         } catch (error) {
             console.log(error)
+            toast.error(
+                error.response?.data?.message || "Something went wrong"
+            );
         }
     }
     const handleDelete = async (id) => {

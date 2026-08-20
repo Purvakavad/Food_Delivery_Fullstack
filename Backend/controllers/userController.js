@@ -9,6 +9,8 @@ import foodModel from '../models/foodModel.js'
 import multer from '../Midllerware/multer.js'
 import cloudinary from '../config/cloudinary.js'
 import mongoose from "mongoose";
+import notificationModel from "../models/notificationModel.js";
+
 const userLogin = async(req,res)=>{
     try {
         const {email,password} = req.body
@@ -215,7 +217,16 @@ const adminLogin = async(req,res)=>{
                 message: "Invalid Password"
             });
         }
-    const token = jwt.sign({id: admin._id,role: "admin"},process.env.JWT_SECRET,{expiresIn: "7d"});
+        const token = jwt.sign(
+            {
+                id: admin._id,
+                role: admin.role
+            },
+            process.env.JWT_SECRET,
+            {
+                expiresIn: "7d"
+            }
+        );
         res.cookie("adminToken", token, {
     httpOnly: true,
     secure: process.env.NODE_ENV === "production",
@@ -231,23 +242,44 @@ const adminLogin = async(req,res)=>{
         res.json({success:false,message:error.message})
     }
 }
-const getAdminInfo = async(req,res)=>{
+const getAdminInfo = async (req, res) => {
     try {
-        if(!req.adminId){
-            return res.json({success:false,massage:"unautorize user"})
+
+        if (!req.admin) {
+            return res.status(401).json({
+                success: false,
+                message: "Unauthorized user"
+            });
         }
-        const response = await adminModel.findById(req.adminId)
-        res.json({success:true,data:response})
+
+        const response = await adminModel.findById(req.admin.id);
+
+        if (!response) {
+            return res.status(404).json({
+                success: false,
+                message: "Admin not found"
+            });
+        }
+
+        return res.json({
+            success: true,
+            data: response
+        });
+
     } catch (error) {
-        console.log(error)
-        res.json({success:false,massage:error.message})
+        console.log(error);
+
+        return res.status(500).json({
+            success: false,
+            message: error.message
+        });
     }
-}
+};
 const editAdminProfile=async(req,res)=>{
     try {
         const {name,email}= req.body
         const updateData={name,email}
-        const admin = await adminModel.findById(req.adminId)
+        const admin = await adminModel.findById(req.admin.id)
         if(req.file){
             const result = await cloudinary.uploader.upload(req.file.path)
             if(result.secure_url){
@@ -258,7 +290,7 @@ const editAdminProfile=async(req,res)=>{
             updateData.image =result.secure_url
             updateData.imagePublicId = result.public_id
         }
-        await adminModel.findByIdAndUpdate(req.adminId,updateData)
+        await adminModel.findByIdAndUpdate(req.admin.id,updateData)
         res.json({success:true,message:"Profile updated successfully"})
     } catch (error) {
         console.log(error)
@@ -267,7 +299,7 @@ const editAdminProfile=async(req,res)=>{
 const editadminPwd = async(req,res)=>{
     try {
         const {currentPassword,newPassword,confirmPassword} = req.body
-        const user = await adminModel.findById(req.adminId)
+        const user = await adminModel.findById(req.admin.id)
         if(!user){
             return res.json({success:false,message:"unauthorized user"})
         }
@@ -485,7 +517,6 @@ const deleteUser = async(req,res)=>{
         res.json({success:false,message:error.message})
     }
 }
-import notificationModel from "../models/notificationModel.js";
 const getNotifications = async (req, res) => {
     try {
         const notifications = await notificationModel

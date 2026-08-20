@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import styles from "./MyProfile.module.css";
 import {
     FaUserShield,
@@ -11,7 +11,8 @@ import {
 import { AdminContext } from "../../Context/AdminContext";
 
 const AdminProfile = () => {
-    const { adminData, navigate } = useContext(AdminContext);
+    const { adminData, navigate, getAdminInfo } = useContext(AdminContext);
+    useEffect(() => { getAdminInfo() }, [])
     return (
         <section className={styles.profile}>
             <div className={styles.card}>
