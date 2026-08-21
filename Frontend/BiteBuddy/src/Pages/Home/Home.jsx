@@ -7,8 +7,8 @@ import { FaLeaf, FaMedal, FaHamburger } from "react-icons/fa";
 import WhyChoose from '../../Component/WhyChoose/WhyChoose';
 import { StoreContext } from '../../Context/StoreContext';
 import AOS from "aos";
-import { Link } from "react-router-dom";
 import "aos/dist/aos.css";
+import { Link } from "react-router-dom";
 export const Home = () => {
     const { foods, category, backend_url, cartData, decrement, increment, addToCart, navigate } = useContext(StoreContext)
     const popularCategory = category

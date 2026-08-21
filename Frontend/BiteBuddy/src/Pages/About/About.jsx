@@ -8,11 +8,7 @@ import {
     FaCreditCard,
     FaMotorcycle
 } from "react-icons/fa";
-import {
-    FaUsers,
-    FaStore,
-    FaStar
-} from "react-icons/fa";
+
 import { StoreContext } from '../../Context/StoreContext';
 export default function About() {
     const { navigate } = useContext(StoreContext)
