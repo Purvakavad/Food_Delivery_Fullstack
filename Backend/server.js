@@ -21,14 +21,16 @@ const allowedOrigins = [
     "http://localhost:5173",
     "http://localhost:5174",
     "https://bitebuddy-frontend-ecrq5yxsq-purva5.vercel.app",
-    "https://bitebuddy-admin-kvaudd3w7-purva5.vercel.app"
-
 ];
 
 app.use(
     cors({
         origin: (origin, callback) => {
-            if (!origin || allowedOrigins.includes(origin)) {
+            if (
+                !origin ||
+                allowedOrigins.includes(origin) ||
+                origin.endsWith(".vercel.app")
+            ) {
                 callback(null, true);
             } else {
                 callback(new Error("Not allowed by CORS"));
