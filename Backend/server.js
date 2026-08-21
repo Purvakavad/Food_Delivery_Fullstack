@@ -18,9 +18,9 @@ import cartRoute from './routes/cartRoutes.js';
 import orderRoute from './routes/orderRoutes.js';
 import paymentRouter from './routes/paymentRoute.js';
 const allowedOrigins = [
-    "http://localhost:4173",
     "http://localhost:5173",
     "http://localhost:5174",
+    "https://bitebuddy-frontend-ecrq5yxsq-purva5.vercel.app"
 ];
 
 app.use(
