@@ -9,12 +9,20 @@ The project includes a responsive customer website and a dedicated Admin Panel f
 ## 🌐 Live Demo
 
 ### 👤 Customer Website
-**Live Demo:** [BiteBuddy Customer Website](https://bitebuddy-frontend-cyan.vercel.app/)
+
+**Live Demo:**
+
+<a href="https://bitebuddy-frontend-cyan.vercel.app/" target="_blank">
+🚀 Open BiteBuddy Customer Website
+</a>
 
 ### 🔐 Admin Panel
-**Admin Panel:** [BiteBuddy Admin Panel](https://bitebuddy-admin-five.vercel.app/)
 
+**Admin Panel:**
 
+<a href="https://bitebuddy-admin-five.vercel.app/" target="_blank">
+🔐 Open BiteBuddy Admin Panel
+</a>
 ---
 
 ## 🔐 Admin Panel Demo Access
@@ -204,7 +212,7 @@ The Admin Panel is protected at both the frontend and backend levels. Even if a 
 ![Admin Products](screenshots/products.png)
 
 #### 📂 Categories
-![Admin Categories](screenshots/categories.png)
+![Admin Categories](screenshots/category.png)
 
 #### 👤 Users
 ![Admin Users](screenshots/users.png)
