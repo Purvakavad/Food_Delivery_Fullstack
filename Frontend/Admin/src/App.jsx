@@ -1,5 +1,5 @@
 import React, { lazy, Suspense, useContext } from 'react'
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route, Navigate } from 'react-router-dom'
 import Navbar from './Components/Navbar/Navbar'
 import Sidebar from './Components/Sidebar/Sidebar'
 import { ToastContainer } from 'react-toastify'
@@ -30,6 +30,8 @@ export default function App() {
         <Suspense fallback={<div>Loading...</div>}>
           <Routes>
             <Route path="/login" element={<Login />} />
+            <Route path="/" element={<Navigate to="/login" replace />} />
+            <Route path="*" element={<Navigate to="/login" replace />} />
           </Routes>
         </Suspense>
       </>

@@ -20,7 +20,7 @@ import paymentRouter from './routes/paymentRoute.js';
 const allowedOrigins = [
     "http://localhost:5173",
     "http://localhost:5174",
-    "https://bitebuddy-frontend-ecrq5yxsq-purva5.vercel.app",
+    "https://bitebuddy-frontend-ecrq5yxsq-purva5.vercel.app"
 ];
 
 app.use(
@@ -36,7 +36,7 @@ app.use(
                 callback(new Error("Not allowed by CORS"));
             }
         },
-        credentials: true,
+        credentials: true
     })
 );
 app.use(cookieParser());
