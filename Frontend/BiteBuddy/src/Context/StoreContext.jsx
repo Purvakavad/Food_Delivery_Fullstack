@@ -73,33 +73,58 @@ const StoreContextProvider = ({ children }) => {
             console.log(error);
         }
     }, [backend_url, fetchCart]);
+
     const addToCart = useCallback(async (id) => {
         try {
             if (!id) return;
-            const response = await axios.post(
-                `${backend_url}/api/cart/add`,
-                { itemId: id, action: "increment" },
-                { withCredentials: true }
-            );
-            if (response.data.success === false) {
+            if (!userData) {
+                setPendingItemId(id);
                 setShowLoginModal(true);
                 return;
             }
+
+            const response = await axios.post(
+                `${backend_url}/api/cart/add`,
+                {
+                    itemId: id,
+                    action: "increment"
+                },
+                {
+                    withCredentials: true
+                }
+            );
+
+            if (response.data.success === false) {
+                setPendingItemId(id);
+                setShowLoginModal(true);
+                return;
+            }
+
             setCartData(prev => ({
                 ...prev,
                 [id]: (prev[id] || 0) + 1
             }));
+
             await fetchCart();
+
             setShowLoginModal(false);
+
         } catch (error) {
+            console.log("Add to cart error:", error);
+
             if (error.response?.status === 401) {
                 setPendingItemId(id);
                 setShowLoginModal(true);
                 return;
             }
+
             toast.error("Something went wrong");
         }
-    }, [backend_url, fetchCart]);
+    }, [
+        backend_url,
+        fetchCart,
+        userData
+    ]);
     const totalCartItem = useMemo(() => {
         return Object.values(cartData).reduce(
             (total, qty) => total + qty,

@@ -4,6 +4,9 @@ const addCartItem = async(req,res)=>{
     try {
         const {itemId,action} = req.body
         const user = await userModel.findById(req.userId)
+        if(!user){
+            return res.json({success:false,message:"please login first"})
+        }
         if (user.cartData[itemId]) {
             if (action === "increment") {
                 user.cartData[itemId] += 1;
