@@ -21,7 +21,7 @@ const allowedOrigins = [
     "http://localhost:5173",
     "http://localhost:5174",
     "https://bitebuddy-frontend-ecrq5yxsq-purva5.vercel.app",
-    
+    "https://bitebuddy-admin-five.vercel.app/"
 
 ];
 
