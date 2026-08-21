@@ -144,6 +144,50 @@
     box-shadow: 0 10px 20px rgba(255, 87, 34, .35);
 }
 
+.modalOverlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.modal {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.modalButtons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.loginBtn,
+.cancelBtn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.loginBtn {
+    background: #ff6b35;
+    color: white;
+}
+
+.cancelBtn {
+    background: #eee;
+    color: #333;
+}
+
 @media(max-width:992px) {
     .singleProduct {
         width: 95%;

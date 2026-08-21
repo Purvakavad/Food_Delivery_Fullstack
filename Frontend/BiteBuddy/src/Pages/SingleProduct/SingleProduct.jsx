@@ -6,7 +6,13 @@ import styles from './SingleProduct.module.css'
 import { FaStar } from "react-icons/fa";
 export default function SingleProduct() {
     const { id } = useParams()
-    const { backend_url, addToCart } = useContext(StoreContext)
+    const {
+        backend_url,
+        addToCart,
+        showLoginModal,
+        setShowLoginModal,
+        navigate
+    } = useContext(StoreContext);
     const [productData, setProductData] = useState({})
     const getProduct = async () => {
         try {
@@ -61,6 +67,39 @@ export default function SingleProduct() {
                     </button>
                 </div>
             </div>
+
+            {
+                showLoginModal && (
+                    <div className={styles.modalOverlay}>
+                        <div className={styles.modal}>
+                            <h2>Login Required</h2>
+
+                            <p>
+                                Please login to add items to your cart.
+                            </p>
+
+                            <div className={styles.modalButtons}>
+                                <button
+                                    className={styles.loginBtn}
+                                    onClick={() => {
+                                        setShowLoginModal(false);
+                                        navigate("/login");
+                                    }}
+                                >
+                                    Login
+                                </button>
+
+                                <button
+                                    className={styles.cancelBtn}
+                                    onClick={() => setShowLoginModal(false)}
+                                >
+                                    Cancel
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                )
+            }
         </div>
     );
 }
