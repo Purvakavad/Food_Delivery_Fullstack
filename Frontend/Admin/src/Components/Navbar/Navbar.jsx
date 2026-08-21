@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom'
 import axios from 'axios'
 import { IoClose } from "react-icons/io5";
 import { FaBell, FaSearch, FaBars, FaUtensils, FaUsers, FaUser, FaShoppingBag } from "react-icons/fa";
+import { toast } from 'react-toastify';
 export default function Navbar() {
     const { showSidebar, setShowSidebar, isLogin, setIsLogin, backend_url, navigate, adminData } = useContext(AdminContext)
     const [showSearch, setShowSearch] = useState(false)
@@ -27,6 +28,7 @@ export default function Navbar() {
             if (response.data.success) {
                 setIsLogin(false);
                 navigate("/login")
+                toast.success(response.data.message)
             }
         } catch (error) {
             console.log(error)

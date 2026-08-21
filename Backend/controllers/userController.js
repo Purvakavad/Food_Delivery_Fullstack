@@ -30,12 +30,11 @@ const userLogin = async(req,res)=>{
             }
         );
         res.cookie("userToken", token, {
-        httpOnly: true,
-        secure: true,
-        sameSite: "none",
-        path: "/",
-        maxAge: 7 * 24 * 60 * 60 * 1000
-    });
+    httpOnly: true,
+    secure: process.env.NODE_ENV === "production",
+    sameSite: process.env.NODE_ENV === "production" ? "none" : "lax",
+    maxAge: 7 * 24 * 60 * 60 * 1000
+});
         return res.json({success:true,message:"Login Successfully"})
     } catch (error) {
         console.log(error)
@@ -228,12 +227,13 @@ const adminLogin = async(req,res)=>{
                 expiresIn: "7d"
             }
         );
+      
         res.cookie("adminToken", token, {
-                httpOnly: true,
-                secure: true,
-                sameSite: "none",
-                maxAge: 7 * 24 * 60 * 60 * 1000
-            });
+            httpOnly: true,
+            secure: process.env.NODE_ENV === "production",
+            sameSite: process.env.NODE_ENV === "production" ? "none" : "lax",
+            maxAge: 7 * 24 * 60 * 60 * 1000
+        });
         return res.json({
             success:true,
             message:"Login Successfully"
@@ -339,7 +339,8 @@ const editadminPwd = async(req,res)=>{
     }
 }
 const logoutAdmin = (req, res) => {
-    res.clearCookie("adminToken", {
+    
+        res.clearCookie("adminToken", {
         httpOnly: true,
         sameSite: "lax",
         secure: process.env.NODE_ENV === "production"
