@@ -9,10 +9,10 @@ The project includes a responsive customer website and a dedicated Admin Panel f
 ## 🌐 Live Demo
 
 ### 👤 Customer Website
-**Live Demo:** `LIVE_DEMO_URL`
+**Live Demo:** [BiteBuddy Customer Website](https://bitebuddy-frontend-cyan.vercel.app/)
 
 ### 🔐 Admin Panel
-**Admin Panel:** `ADMIN_PANEL_URL`
+**Admin Panel:** [BiteBuddy Admin Panel](https://bitebuddy-admin-five.vercel.app/)
 
 
 ---
@@ -254,9 +254,9 @@ BiteBuddy is designed as a full-stack application with separate frontend, backen
 ### Deployment
 
 ```text
-Customer Frontend → FRONTEND_HOSTING
-Admin Panel       → ADMIN_HOSTING
-Backend API       → BACKEND_HOSTING
+Customer Frontend → [BiteBuddy Customer Website](https://bitebuddy-frontend-cyan.vercel.app/)
+Admin Panel       → [BiteBuddy Admin Panel](https://bitebuddy-admin-five.vercel.app/)
+Backend API       → [BiteBuddy Backend API](https://bitebuddy-backend-nu.vercel.app/)
 Database          → MongoDB
 Images            → Cloudinary
 Payments          → Razorpay

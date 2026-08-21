@@ -41,7 +41,7 @@ const Login = () => {
             <div className={styles.login_box}>
                 <div>
                     <h1>Welcome Back </h1>
-                    <p>Login to continue ordering your favorite food.</p>
+                    <p>Login to access your BiteBuddy Admin Panel.</p>
                 </div>
                 <form onSubmit={handleSubmit}>
                     <div className={styles.input_box}>
