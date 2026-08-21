@@ -7,6 +7,9 @@ import connectDB from './config/db.js'
 import cors from 'cors'
 import cookieParser from "cookie-parser";
 const app = express()
+app.get("/", (req, res) => {
+    res.send("BiteBuddy Backend is running successfully 🚀");
+});
 import itemsRoutes from './routes/itemsRoute.js'
 import cloudinary from "./config/cloudinary.js";
 import categoryRoute from './routes/categoryRoute.js';
