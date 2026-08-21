@@ -7,6 +7,7 @@ import { FaLeaf, FaMedal, FaHamburger } from "react-icons/fa";
 import WhyChoose from '../../Component/WhyChoose/WhyChoose';
 import { StoreContext } from '../../Context/StoreContext';
 import AOS from "aos";
+import { Link } from "react-router-dom";
 import "aos/dist/aos.css";
 export const Home = () => {
     const { foods, category, backend_url, cartData, decrement, increment, addToCart, navigate } = useContext(StoreContext)
@@ -72,7 +73,7 @@ export const Home = () => {
                 <section className={styles.popular_categories} data-aos="fade-up" data-aos-delay="50">
                     <div className={styles.section_header}>
                         <h2>Popular Categories</h2>
-                        <a href="/menu">View All →</a>
+                        <Link to="/menu">View All →</Link>
                     </div>
                     <div className={styles.category_container}>
                         {
@@ -108,7 +109,7 @@ export const Home = () => {
                 <section className={styles.popular_dishes} data-aos="fade-right" data-aos-delay="0">
                     <div className={styles.section_header}>
                         <h2>Popular Dishes</h2>
-                        <a href="/menu">View All →</a>
+                        <Link to="/menu">View All →</Link>
                     </div>
                     <div className={styles.dishes_cards}>
                         {
