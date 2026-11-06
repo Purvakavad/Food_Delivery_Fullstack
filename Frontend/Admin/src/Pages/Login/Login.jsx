@@ -10,8 +10,8 @@ const Login = () => {
     const { isLogin, setIsLogin, backend_url, navigate } = useContext(AdminContext)
     const [showPassword, setShowPassword] = useState(false)
     const [data, setData] = useState({
-        email: "",
-        password: "",
+        email: "demo@bitebuddy.com",
+        password: "Demo@12345",
     });
     const handleChange = (e) => {
         setData((prev) => ({
